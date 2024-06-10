@@ -16,6 +16,8 @@ Crie um arquivo `.env` e insira as credenciais de `local.env`
 
 Execute também para instalar o `pre-commit`:
 
+Caso não queira utilizar o `poetry`, na raiz do projeto tem o arquivo requirements.txt; basta apenas criar um ambiente virtual normalmente e instalar as dependências.
+
 ```shell
 make precommit
 ```
