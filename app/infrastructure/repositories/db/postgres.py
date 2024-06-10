@@ -76,12 +76,12 @@ class PostgresRepository(Repository):
 
         query = build_query(model=self.model, filter=filter_)
 
-        data = (await self.session.execute(query)).scalars().all()
-
         if limit:
             query = query.limit(limit=limit)
 
         if offset:
             query = query.offset(offset=offset)
+
+        data = (await self.session.execute(query)).scalars().all()
 
         return data
