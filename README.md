@@ -12,21 +12,24 @@ poetry env use 3.12
 poetry install
 ```
 
+Para ativar o ambiente virtual, execute:
+``` shell
+poetry shell
+```
+
 Crie um arquivo `.env` e insira as credenciais de `local.env`
 
-Execute também para instalar o `pre-commit`:
-
-Caso não queira utilizar o `poetry`, na raiz do projeto tem o arquivo requirements.txt; basta apenas criar um ambiente virtual normalmente e instalar as dependências.
-
-```shell
-make precommit
-```
 
 Para subir o banco de dados, caso não tenha o [docker](https://docs.docker.com/engine/install/ubuntu/) e o [docker-compose](https://docs.docker.com/compose/install/linux/) instalado, faça a instalação e logo em seguida, execute:
 
 ```bash
 docker-compose up -d
 ```
+
+##### Observação
+
+Caso não queira utilizar o `poetry`, na raiz do projeto tem o arquivo requirements.txt; basta apenas criar um ambiente virtual normalmente e instalar as dependências.
+
 
 ## Banco de Dados
 Para criar o banco de dados está sendo utilizando o Alembic para estruturar as migrations. Execute:
@@ -48,6 +51,8 @@ make start-scraper
 ```
 
 Este comando ativa um robô que fará a extração de dados no site `Adoro Cinema`, especificamente nos filmes infantis.
+
+**Observação: dependendo da conexão e performance da sua máquina, o tempo pode variar de 1 minuto a 5 minutos.**
 
 Exemplo de um dado extraído:
 ```json
