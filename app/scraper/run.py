@@ -6,7 +6,7 @@ from app.scraper.base import MovieScraper
 from app.infrastructure.repositories.db.session import async_session
 
 
-class Movies:
+class MoviesSpider:
     def __init__(self) -> None:
         self.scraper = MovieScraper()
 
@@ -23,5 +23,5 @@ class Movies:
 
 
 if __name__ == "__main__":
-    movie = Movies()
+    movie = MoviesSpider()
     asyncio.run(movie.start())

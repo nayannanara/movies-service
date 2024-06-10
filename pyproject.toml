@@ -21,6 +21,7 @@ alembic = "^1.13.1"
 httpx = "^0.27.0"
 prefect = "^2.19.4"
 pandas = "^2.2.2"
+pytest-mock = "^3.14.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.278"
