@@ -17,17 +17,15 @@ run-migrations:
 create-migrations:
 	@PYTHONPATH=$PYTHONPATH:$(pwd) alembic revision --autogenerate -m $(description)
 
+start-flow:
+	@poetry run python -m app.flows.main
+
 test:
 	@poetry run pytest
 
 test-matching:
 	@poetry run pytest ./tests -vv -k $(K)
 
-unit-tests:
-	@poetry run pytest ./tests -m "not integration"
-
-integration-tests:
-	@poetry run pytest ./tests -m integration
 
 coverage:
 	@poetry run pytest --cov=app --cov-report=term-missing --cov-report=xml ./tests/
