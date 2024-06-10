@@ -26,7 +26,6 @@ test:
 test-matching:
 	@poetry run pytest ./tests -vv -k $(K)
 
-
 coverage:
 	@poetry run pytest --cov=app --cov-report=term-missing --cov-report=xml ./tests/
 

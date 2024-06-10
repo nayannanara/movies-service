@@ -51,3 +51,19 @@ plugins = "sqlalchemy.ext.mypy.plugin"
 
 [tool.coverage.run]
 concurrency = ["greenlet"]
+parallel = true
+source = [
+    "docs_src",
+    "tests",
+    "fastapi"
+]
+context = '${CONTEXT}'
+omit = [
+    "*/python3.9/site-packages/*",
+    "*/__init__.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  '@(abc\.)?abstractmethod',
+]

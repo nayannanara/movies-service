@@ -42,10 +42,6 @@ class Transaction:
         self.session.add_all(models)
         return models
 
-    async def close_session(self: "Transaction") -> None:
-        if self.session.is_active:
-            await self.session.close()
-
 
 class PostgresRepository(Repository):
     model: Any
