@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_PASSWORD: movies
+      POSTGRES_USER: movies
+      POSTGRES_DB: movies
+      POSTGRES_HOST: localhost
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
