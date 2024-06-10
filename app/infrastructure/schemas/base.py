@@ -11,4 +11,3 @@ class BaseSchema(BaseModel):
 class OutSchema(BaseModel):
     id: UUID4 = Field()
     created_at: datetime = Field()
-    updated_at: datetime = Field()

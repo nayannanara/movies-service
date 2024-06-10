@@ -18,6 +18,3 @@ class CreateBaseModel(DeclarativeBase):
     created_at: Mapped[datetime] = mapped_column(
         DateTime, default=get_utc_now, nullable=False
     )
-    updated_at: Mapped[datetime] = mapped_column(
-        DateTime, default=get_utc_now, nullable=False
-    )
