@@ -159,3 +159,5 @@ Caso queira executar um teste específico, execute:
 ```bash
 make test-matching K=nomedoteste
 ```
+
+obs.: alguns testes que não estão `mockados`, estão utilizando o banco de dados, portanto, caso execute o comando pra rodar os testes, o banco de dados será limpo; devido a fixture `db_session`.
